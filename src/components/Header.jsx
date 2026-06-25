@@ -15,7 +15,7 @@ export default function Header({
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18.0003 4H20.0003C20.5526 4 21.0003 4.44772 21.0003 5V19C21.0003 19.5523 20.5526 20 20.0003 20H18.0003V18H19.0003V6H18.0003V4ZM16.0003 4V20H8.0003V4H16.0003ZM6.0003 4H4.0003C3.44801 4 3.0003 4.44772 3.0003 5V19C3.0003 19.5523 3.44801 20 4.0003 20H6.0003V18H5.0003V6H6.0003V4ZM10.0003 6H14.0003V9H10.0003V6ZM10.0003 11H14.0003V14H10.0003V11ZM10.0003 16H14.0003V19H10.0003V16Z"></path>
         </svg>
-        <span>MovieExplorer</span>
+        <span>MovieMania</span>
       </div>
 
       <div className="nav-controls">
@@ -41,7 +41,7 @@ export default function Header({
         )}
 
         <button
-          className="action-btn"
+          className="action-btn"        
           onClick={() => setIsDarkTheme(!isDarkTheme)}
           title={isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"}
           aria-label="Toggle theme"
