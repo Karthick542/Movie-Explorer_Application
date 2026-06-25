@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Global Constants */
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-full: 9999px;
+  
+  /* Theme-dependent tokens (Dark Theme - Default) */
+  --bg-color: #080b11;
+  --bg-secondary: #0f1524;
+  --bg-card: rgba(18, 26, 46, 0.7);
+  --bg-glass: rgba(10, 14, 26, 0.75);
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --accent-color: #f5c518; /* Cinematic Gold */
+  --accent-rgb: 245, 197, 24;
+  --accent-hover: #e0b010;
+  --heart-color: #ef4444;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(245, 197, 24, 0.5);
+  --shadow-primary: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --blur-amount: 12px;
+}
+
+[data-theme="light"] {
+  /* Light Theme tokens */
+  --bg-color: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.75);
+  --bg-glass: rgba(248, 250, 252, 0.8);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --accent-color: #ca8a04; /* Warm Gold */
+  --accent-rgb: 202, 138, 4;
+  --accent-hover: #a16207;
+  --heart-color: #dc2626;
+  --border-color: rgba(15, 23, 42, 0.08);
+  --border-focus: rgba(202, 138, 4, 0.5);
+  --shadow-primary: 0 8px 30px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 4px 20px rgba(15, 23, 42, 0.05);
+  --blur-amount: 16px;
+}
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border: 2px solid var(--bg-color);
+  border-radius: var(--border-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(var(--accent-rgb), 0.2); }
+  50% { box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.6); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Skeleton Loading Animation Class */
+.skeleton {
+  background: linear-gradient(90deg, 
+    var(--bg-secondary) 25%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    var(--bg-secondary) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+[data-theme="light"] .skeleton {
+  background: linear-gradient(90deg, 
+    var(--bg-secondary) 25%, 
+    rgba(15, 23, 42, 0.03) 50%, 
+    var(--bg-secondary) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Base interactive elements */
+button, input, select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
