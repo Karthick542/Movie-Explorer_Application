@@ -11,7 +11,7 @@ const isV4Token = (token) => {
 
 // Retrieve the token/key from localStorage
 export const getApiKey = () => {
-  return localStorage.getItem(STORAGE_KEY) || "";
+  return localStorage.getItem(STORAGE_KEY) || "6dacd6dded24eea030458787a011b6ea";
 };
 
 // Save the token/key to localStorage
