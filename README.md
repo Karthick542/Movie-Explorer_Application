@@ -1,16 +1,41 @@
-# React + Vite
+# 🎬 Movie Explorer Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A fully responsive React.js Single Page Application for 
+browsing and searching movies using the TMDB public REST API.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+🔗 [View Live Project](https://your-vercel-link-here)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- 🔍 Live movie search with instant results
+- 🎥 Browse popular and trending movies
+- 📱 Fully responsive across mobile, tablet & desktop
+- ⚡ Fast and smooth UI with React Hooks
 
-## React Compiler
+## 🛠️ Tech Stack
+- React.js — Functional Components & Hooks
+- JavaScript ES6+
+- TMDB REST API
+- CSS3 & Flexbox
+- Vercel (Deployment)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ React Concepts Used
+- useState — Search state management
+- useEffect — API data fetching
+- Component-Based Architecture
+- REST API Integration
 
-## Expanding the Oxlint configuration
+## 📦 Installation & Setup
+```bash
+git clone https://github.com/Karthick542/Movie-Explorer_Application.git
+cd Movie-Explorer_Application
+npm install
+npm start
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🤖 Built With AI Assistance
+GitHub Copilot | Cursor | Claude AI
+
+## 👨‍💻 Developer
+**Karthick** — [Portfolio](https://portfolio-project-zeta-mocha-90.vercel.app) 
+| [LinkedIn](https://linkedin.com/in/karthickk07)
